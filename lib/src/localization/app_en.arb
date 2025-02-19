@@ -1,0 +1,23 @@
+{
+  "appTitle": "pomidorec",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "start" : "Start",
+  "@start": {
+    "description": "The start button"
+  },
+  "stop" : "Stop",
+  "@stop": {
+    "description": "The stop button"
+  },
+  "reset" : "Reset",
+  "@reset": {
+    "description": "The reset button"
+  },
+  "time": "Time",
+  "@time": {
+    "description": "The time label"
+  }
+
+}

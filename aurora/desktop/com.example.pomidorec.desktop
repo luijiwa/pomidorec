@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=pomidorec
+Comment=A new Flutter project.
+Icon=com.example.pomidorec
+Exec=/usr/bin/com.example.pomidorec
+X-Nemo-Application-Type=silica-qt5
+
+[X-Application]
+Permissions=
+OrganizationName=com.example
+ApplicationName=pomidorec

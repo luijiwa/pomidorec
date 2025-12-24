@@ -21,28 +21,27 @@ class SettingsView extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
-        // Glue the SettingsController to the theme selection DropdownButton.
-        //
-        // When a user selects a theme from the dropdown list, the
-        // SettingsController is updated, which rebuilds the MaterialApp.
-        child: DropdownButton<ThemeMode>(
-          // Read the selected themeMode from the controller
-          value: controller.themeMode,
-          // Call the updateThemeMode method any time the user selects a theme.
-          onChanged: controller.updateThemeMode,
-          items: const [
-            DropdownMenuItem(
-              value: ThemeMode.system,
-              child: Text('System Theme'),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            // Glue the SettingsController to the theme selection DropdownButton.
+            //
+            // When a user selects a theme from the dropdown list, the
+            // SettingsController is updated, which rebuilds the MaterialApp.
+            DropdownMenu<ThemeMode>(
+              // Read the selected themeMode from the controller
+              initialSelection: controller.themeMode,
+              // Call the updateThemeMode method any time the user selects a theme.
+              onSelected: controller.updateThemeMode,
+              dropdownMenuEntries: const [
+                DropdownMenuEntry(
+                    value: ThemeMode.system, label: 'System Theme'),
+                DropdownMenuEntry(value: ThemeMode.light, label: 'Light Theme'),
+                DropdownMenuEntry(value: ThemeMode.dark, label: 'Dark Theme')
+              ],
             ),
-            DropdownMenuItem(
-              value: ThemeMode.light,
-              child: Text('Light Theme'),
-            ),
-            DropdownMenuItem(
-              value: ThemeMode.dark,
-              child: Text('Dark Theme'),
-            )
           ],
         ),
       ),

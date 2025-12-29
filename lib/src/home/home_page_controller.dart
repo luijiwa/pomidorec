@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-/// Контроллер для Pomodoro-таймера на базе ChangeNotifier
+/// Controller for the Pomodoro timer based on ChangeNotifier
 class HomePageController extends ChangeNotifier {
   Timer? _timer;
   int _remainingTime = 25 * 60;

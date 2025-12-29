@@ -70,7 +70,9 @@ class HomePageController extends ChangeNotifier {
   void dispose() {
     try {
       _timer?.cancel();
-    } on Object catch (_, __) {}
+    } on Object catch (error, stackTrace) {
+      // Explicitly ignored: timer cancellation during dispose should be safe.
+    }
     super.dispose();
   }
 }

@@ -14,7 +14,8 @@ class HomePage extends StatefulWidget {
   });
   static const routeName = '/home';
 
-  /// {@macro home_page}
+  /// Returns the [_HomePageState] associated with the closest [HomePage]
+  /// ancestor of the given [context], or `null` if no such ancestor exists.
   @internal
   static _HomePageState? maybeOf(BuildContext context) =>
       context.findAncestorStateOfType<_HomePageState>();
